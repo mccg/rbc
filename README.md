@@ -1,11 +1,11 @@
 # rbc
----
-## Remote scripts invoking
-Running command like:
-```shell
-\curl -sSL http://name.of.domain/path | command
-```
-helps you download scripts and then run it.
+
+> ### Remote scripts invoking
+> By running command like:
+> ```shell
+> \curl -sSL http://name.of.domain/path | command
+> ```
+> You can run scripts and then run a batch script after downloading.
 
 ## Remote Bash Calls
 This repo contains some bash scripts that are 
