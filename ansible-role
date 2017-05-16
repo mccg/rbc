@@ -1,0 +1,22 @@
+
+IVENS=$1
+HOSTS=$2
+ROLES=${*:3}
+tmp_chars=$(mktemp -u |cut -f2 -d ".")
+tmp_playbook=_role.${tmp_chars}.yml
+tmp_retry=_role.${tmp_chars}.retry
+touch $tmp_playbook
+echo "temp playbook: $tmp_playbook"
+cat << EOF > $tmp_playbook
+---
+- hosts: ${HOSTS}
+  roles:
+EOF
+for r in $ROLES;
+do
+  echo "\
+    - ${r}" >>$tmp_playbook
+done
+ansible-playbook -i inventories/${IVENS} ${tmp_playbook}
+rm -f $tmp_playbook
+rm -f $tmp_retry
