@@ -17,6 +17,6 @@ do
   echo "\
     - ${r}" >>$tmp_playbook
 done
-ansible-playbook -i inventories/${IVENS} ${tmp_playbook}
+ansible-playbook -i ${IVENS} ${tmp_playbook}
 rm -f $tmp_playbook
 rm -f $tmp_retry
