@@ -1,7 +1,7 @@
 # rbc
 
 > ### Remote scripts invoking
-> By running command like: ``shell \curl -sSL http://www.domain.com/path | command``,
+> By running command like: ``\curl -sSL http://www.domain.com/path | command``,
 > you can run scripts and then run a batch script after downloading.
 
 ## Remote Bash Calls
@@ -21,14 +21,13 @@ Run command(replace ``certain_function`` with a script name in this repository):
 ```shell
 ansible-roles <inventory path> <group name> <role1> [ role2, role3, ... ]
 ```
-An example when ansible practice is as follows:
+An example when your ansible practice likes as follows:
 ```shell
 #   .
 #   ├── ansible.cfg
 #   ├── _a_playbook.yml
 #   ├── inventories
 #   │   ├── develop
-#   │   │   └── hosts
 #   │   └── staging
 #   │       └── hosts
 #   └── roles
