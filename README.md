@@ -8,12 +8,14 @@
 This repo contains some bash scripts that are
 ad-hoc, useful as well as rarely used.
 
-### To RBC this repo:
-Run command(replace ``certain_function`` with a script name in this repository):
+### To RBC this repository:
+Run command(replace ``FX`` with a script name in this repository):
 ```shell
-\curl -sSL https://raw.githubusercontent.com/mccg/rbc/master/certain_function | bash
+\curl -sSL https://raw.githubusercontent.com/mccg/rbc/r/FX | bash
 # or add arguments after '-s'
-\curl -sSL https://raw.githubusercontent.com/mccg/rbc/master/certain_function | bash -s some args
+\curl -sSL https://raw.githubusercontent.com/mccg/rbc/r/FX | bash -s some args
+# or using a shorter URL from rawgit.com
+\curl -sSL https://rawgit.com/mccg/rbc/r/FX | bash -s
 ```
 
 ## Features(functions) by now:
@@ -21,7 +23,7 @@ Run command(replace ``certain_function`` with a script name in this repository):
 ```shell
 ansible-roles <inventory path> <group name> <role1> [ role2, role3, ... ]
 ```
-An example when your ansible practice likes as follows:
+An example if your ansible practice likes as follows:
 ```shell
 #   .
 #   ├── ansible.cfg
