@@ -21,7 +21,7 @@ Run command(replace ``FX`` with a script name in this repository):
 ## Features(functions) by now:
 - ### Test ansible-roles by one line command:
 ```shell
-ansible-roles <inventory path> <group name> <role1> [ role2, role3, ... ]
+ansible-roles <inventory_path> <group_name> <role1> [ role2, role3, ... ]
 ```
 An example if your ansible practice likes as follows:
 ```shell
