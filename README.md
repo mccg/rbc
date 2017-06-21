@@ -34,10 +34,10 @@ An example if your ansible practice likes as follows:
 ansible-roles inventories/staging group1 role1
 ```
 
-> ### Remote scripts invoking
-> By running command like: ``\curl -sSL http://www.domain.com/path | command``,
-> you can run scripts and then run a batch script after downloading.
-
 ## Remote Bash Calls
 This repo contains some bash scripts that are
 ad-hoc, useful as well as rarely used.
+
+> ### Remote scripts invoking
+> By running command like: ``\curl -sSL http://www.domain.com/path | command``,
+> you can run scripts and then run a batch script after downloading.
