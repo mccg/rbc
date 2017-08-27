@@ -36,5 +36,5 @@
     ```
 
 - > ### Remote scripts invoking
-    By running command like: ``\curl -sSL http://www.domain.com/path | command``,
+  > By running command like: ``\curl -sSL http://www.domain.com/path | command``,
     you will be able to run a batch script after downloading.
