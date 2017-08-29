@@ -12,10 +12,12 @@
     ```
 
 - ## Features by now:
-  - ### Test ansible-roles by one line command:
+  - ### Test your ansible roles by one line command:
     ```shell
     ansible-roles <inventory_path> <group_name> <role1> [ role2, role3, ... ]
     ```
+    When you create a ansible role, wirte a playbook to test it is redundant.
+    `ansible-roles` helps you do that work.
     An example if your ansible practice likes as follows:
     ```shell
     #   .
@@ -24,13 +26,15 @@
     #   ├── inventories
     #   │   ├── develop
     #   │   └── staging
-    #   │       └── hosts
     #   └── roles
-    #       └── role1
-    #           ├── tasks
-    #           │   └── main.yml
-    #           └── vars
-    #               └── main.yml
+    #       ├── role1
+    #       │   ├── tasks
+    #       │   │   └── main.yml
+    #       │   └── vars
+    #       │       └── main.yml
+    #       ├── role2
+    #       ...
+    #
     # Run:
     ansible-roles inventories/staging group1 role1
     ```
