@@ -16,8 +16,8 @@
     ```shell
     ansible-roles <inventory_path> <group_name> <role1> [ role2, role3, ... ]
     ```
-    When you create a ansible role, wirte a playbook to test it is redundant.
-    `ansible-roles` helps you do that work.
+    When you create a ansible role, wirte a playbook to test it is redundant.
+    ansible-roles helps you do that work.
     An example if your ansible practice likes as follows:
     
     ```shell
