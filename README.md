@@ -19,6 +19,7 @@
     When you create a ansible role, wirte a playbook to test it is redundant.
     `ansible-roles` helps you do that work.
     An example if your ansible practice likes as follows:
+    
     ```shell
     #   .
     #   ├── ansible.cfg
