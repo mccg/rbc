@@ -1,0 +1,48 @@
+#!/bin/bash
+
+# date or gdate
+pre_COMM=${1}.
+COMM=${1%%.*}
+
+# debug mode
+pre_DEBUG=${1#*.}
+[ "${pre_DEBUG%.}" == d ] && DEBUG=1 || DEBUG=
+
+# period: BEGIN -> END
+BEGIN=$2
+END=$3
+
+# <+|-><digit> <year|month|week|day|hour|min|sec>
+DELTA=$4
+
+FORMAT=${5:-"%F %T"}
+
+algo_fmt="%F %T %z"
+increasing_=`${COMM} -d "${BEGIN}" +"${algo_fmt}"`
+end_=`${COMM} -d "${END}" +"${algo_fmt}"`
+SEQ_TM=()
+while [ 1 ];
+do
+  [[ "$increasing_" > "$end_" ]] && break
+  tm_item=`${COMM} -d "${increasing_}" +"${FORMAT}"`
+  SEQ_TM=("${SEQ_TM[@]}" "${tm_item}")
+  [ ${DEBUG} ] && echo $tm_item
+  increasing_=`${COMM} -d "${increasing_} ${DELTA}" +"${algo_fmt}"`
+  [ $? -gt 0 ] && break
+done
+
+tmp_seq_tm_loc=`mktemp`
+echo -n "SEQ_TM=("       >$tmp_seq_tm_loc
+for tm in "${SEQ_TM[@]}";
+do
+  echo -n "\"${tm}\" "  >>$tmp_seq_tm_loc
+done
+echo -n ")"             >>$tmp_seq_tm_loc
+[ ${DEBUG} ] \
+  && echo "=> EXPORTED."
+ 
+echo "=> SEQ_TM file: $tmp_seq_tm_loc" \
+&& echo "=> usage: " \
+&& echo "          . $tmp_seq_tm_loc" \
+&& echo "          for tm in \"\${SEQ_TM[@]}\"; do echo -\$tm;done"
+
