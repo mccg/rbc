@@ -55,14 +55,14 @@
     ```shell
     seq-tm <date_command>[.d] "<begin_datetime>" "<end_datetime>" "<time_delta>" "<output_format>"
     ```
-    | Argument       | Comment  | Examples |
-    | ---            | ---      | :---:    |
-    | `date_command` | 'date' in most cases, 'gdate' in BSD and MacOS.    | `date`, `gdate`
-    | `.d`           | Debug mode will print result sequence and etc.     | `date.d`
-    | begin_datetime | Datetime format arguments in `date`'s `-d` option. | `2017-09-01 08:00:00 +0800`
-    | end_datetime   | Ditto.                                             | `2017-09-02`
-    | time_delta     | Time delta in `date`'s `-d` option.                | `+1 day`, `-2 min`
-    | output_format  | Format in     `date`'s `+` option.                 | `%Y-%m-%d %H:%M:%S`
+    | Argument         | Comment  | Examples |
+    | ---              | ---      | :---:    |
+    | `date_command`   | `date` in most cases, `gdate` in BSD and MacOS. | `date`, `gdate`
+    | `.d`             | Debug mode will print result sequence and etc.  | `date.d`
+    | `begin_datetime` | Datetime format in `date`'s `-d` option.        | `2017-09-01 08:00:00 +0800`
+    | `end_datetime`   | Ditto.                                          | `2017-09-02`
+    | `time_delta`     | Time delta in `date`'s `-d` option.             | `+1 day`, `-2 min`
+    | `output_format`  | Format in     `date`'s `+` option.              | `%Y-%m-%d %H:%M:%S`
 
     Quick copy:
     ```shell
