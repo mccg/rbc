@@ -13,10 +13,10 @@
 
 - ## Features by now:
   - #### Tree of content
-    - ##### [ansible-roles](#ansible-roles)
-    - ##### [seq-tm](#seq-tm)
+    - ##### [ansible-roles](#user-content-ansible-roles-test-your-ansible-roles-by-one-line-command)
+    - ##### [seq-tm](#user-content-seq-tm-generate-a-datetime-string-array-by-date-in-shell)
 
-  - ### <span id="ansible-roles">ansible-roles<span>: test your ansible roles by one line command
+  - ### `ansible-roles`: test your ansible roles by one line command
     <span id="ansible-roles"><span>
     ```shell
     ansible-roles <inventory_path> <group_name> <role1> [ role2, role3, ... ]
@@ -49,7 +49,7 @@
     \curl -sSL https://raw.githubusercontent.com/mccg/rbc/r/ansible-roles | bash -s
     ```
 
-  - ### <span id="seq-tm">seq-tm<span>: generate a datetime string array by `date` in shell
+  - ### `seq-tm:` generate a datetime string array by `date` in shell
     Given a begin datetime, an end datetime, timedelta and output format,
     an array could be generated in shell environment.
 
