@@ -16,7 +16,8 @@
     - [ansible-roles](#ansible-roles)
     - [seq-tm](#seq-tm)
 
-  - ### Test your ansible roles by one line command <span id="ansible-roles"><span>
+  - ### Test your ansible roles by one line command
+    <span id="ansible-roles"><span>
     ```shell
     ansible-roles <inventory_path> <group_name> <role1> [ role2, role3, ... ]
     ```
@@ -48,7 +49,8 @@
     \curl -sSL https://raw.githubusercontent.com/mccg/rbc/r/ansible-roles | bash -s
     ```
 
-  - ### Generate a datetime string array by `date` in shell <span id="seq-tm"><span>
+  - ### Generate a datetime string array by `date` in shell
+    <span id="seq-tm"><span>
     Given a begin datetime, an end datetime, timedelta and output format,
     an array could be generated in shell environment.
 
