@@ -42,7 +42,8 @@ echo -n ")"             >>$tmp_seq_tm_loc
   && echo "=> EXPORTED."
  
 echo "=> SEQ_TM file: $tmp_seq_tm_loc" \
-&& echo "=> usage: " \
+&& echo "=> Run: " \
 && echo "          . $tmp_seq_tm_loc" \
+&& echo "=> How-to-use:" \
 && echo "          for tm in \"\${SEQ_TM[@]}\"; do echo -\$tm;done"
 
