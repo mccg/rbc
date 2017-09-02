@@ -51,7 +51,6 @@
   - ### `seq-tm:` generate a datetime string array by `date` in shell
     - Given a begin datetime, an end datetime, timedelta and output format,
       an array could be generated in shell environment.
-
       ```shell
       seq-tm <date_command>[.d] "<begin_datetime>" "<end_datetime>" "<time_delta>" "<output_format>"
       ```
@@ -63,7 +62,7 @@
       | `end_datetime`   | Ditto.                                          | `2017-09-02`
       | `time_delta`     | Time delta in `date`'s `-d` option.             | `+1 day`, `-2 min`
       | `output_format`  | Format in     `date`'s `+` option.              | `%Y-%m-%d %H:%M:%S`
-
+      
       Quick copy:
       ```shell
       \curl -sSL https://raw.githubusercontent.com/mccg/rbc/r/seq-tm | bash -s
