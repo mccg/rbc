@@ -20,7 +20,7 @@
     - ```shell
       ansible-roles <inventory_path> <group_name> <role1> [ role2, role3, ... ]
       ```
-      After creating an ansible role, wirting a playbook to test it is redundant.
+      After creating an ansible role, writing a playbook to test it is redundant.
       `ansible-roles` helps you do that work.
       An example if your ansible practice likes as follows:
 
