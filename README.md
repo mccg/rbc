@@ -13,8 +13,18 @@
 
 - ## Features by now:
   - ### Tree of content
+    - [file-prefix](#file-prefix)
     - [ansible-roles](#ansible-roles)
     - [seq-tm](#seq-tm)
+
+  - ### Organize prefix of files in directory <span id="file-prefix"><span>
+    ```shell
+      file-prefix [-m|--mark <mark>] [-d|--digit <digits>]
+    ```
+    Quick copy:
+    ```shell
+    \curl -sSL https://raw.githubusercontent.com/mccg/rbc/r/file-prefix | bash -s
+    ```
 
   - ### Test your ansible roles by one line command <span id="ansible-roles"><span>
     ```shell
@@ -55,8 +65,8 @@
     ```shell
     seq-tm <date_command>[.d] "<begin_datetime>" "<end_datetime>" "<time_delta>" "<output_format>"
     ```
-    | Argument       | Comment  | Examples |
-    | ---            | ---      | :---:    |
+    | Argument       | Comment                                            | Examples |
+    | ---            | ---                                                | :---:    |
     | `date_command` | 'date' in most cases, 'gdate' in BSD and MacOS.    | `date`, `gdate`
     | `.d`           | Debug mode will print result sequence and etc.     | `date.d`
     | begin_datetime | Datetime format arguments in `date`'s `-d` option. | `2017-09-01 08:00:00 +0800`

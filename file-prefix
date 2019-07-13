@@ -1,0 +1,25 @@
+#!/bin/bash
+
+MS=`date +%s`
+DIGIT=5
+
+while [ -n $1 ]; do
+  case $1 in
+    -m)       MS=$2;    shift 2;;
+    --mark)   MS=$2;    shift 2;;
+    -d)       DIGIT=$2; shift 2;;
+    --digit)  DIGIT=$2; shift 2;;
+    *)        break;;
+  esac
+done
+
+find . -maxdepth 1 -type f -not -path '*/\.*' \
+| awk -v FS='.' -v MS="$MS" -v DIGIT="$DIGIT" '
+BEGIN{i=0}
+{i=i+1}
+{fd=sprintf("%%0%sd",DIGIT)}
+{src=sprintf("\"%s\"",$0)}
+{dst=sprintf(fd ".%s.%s",i,MS,$NF)}
+{print src,"->",dst}
+{system("mv "src" "dst)}
+'
