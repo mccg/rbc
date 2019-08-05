@@ -40,7 +40,7 @@ done
 echo -n ")"             >>$tmp_seq_tm_loc
 [ ${DEBUG} ] \
   && echo "=> EXPORTED."
- 
+
 echo "=> SEQ_TM file: $tmp_seq_tm_loc" \
 && echo "=> Run: " \
 && echo "          . $tmp_seq_tm_loc" \

@@ -2,9 +2,9 @@
 
 # invtory path/file
 IVENS=$1
-
 HOSTS=$2
 ROLES=${*:3}
+
 tmp_chars=$(mktemp -u |cut -f2 -d ".")
 tmp_playbook=_role.${tmp_chars}.yml
 tmp_retry=_role.${tmp_chars}.retry
