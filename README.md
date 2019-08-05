@@ -38,7 +38,7 @@
     | --pattern-dir |  Directories pattern of searching.            |
     Quick copy:
     ```shell
-    \curl -sSL https://raw.githubusercontent.com/mccg/rbc/r/rm-namechar | bash -s
+    \curl -sSL https://raw.githubusercontent.com/mccg/rbc/r/rm-namechar | bash -s -
     ```
 
   <span id="file-prefix"></span>
@@ -48,7 +48,7 @@
     ```
     Quick copy:
     ```shell
-    \curl -sSL https://raw.githubusercontent.com/mccg/rbc/r/file-prefix | bash -s
+    \curl -sSL https://raw.githubusercontent.com/mccg/rbc/r/file-prefix | bash -s -
     ```
 
   <span id="ansible-roles"></span>
@@ -81,7 +81,7 @@
     ```
     Quick copy:
     ```shell
-    \curl -sSL https://raw.githubusercontent.com/mccg/rbc/r/ansible-roles | bash -s
+    \curl -sSL https://raw.githubusercontent.com/mccg/rbc/r/ansible-roles | bash -s -
     ```
 
   <span id="seq-tm"><span>
@@ -103,7 +103,7 @@
 
     Quick copy:
     ```shell
-    \curl -sSL https://raw.githubusercontent.com/mccg/rbc/r/seq-tm | bash -s
+    \curl -sSL https://raw.githubusercontent.com/mccg/rbc/r/seq-tm | bash -s -
     ```
 
 - > ### Remote scripts invoking
