@@ -1,4 +1,5 @@
 # rbc
+ 
 - ## Remote Bash Calls
   - This repo contains some bash scripts that are
     ad-hoc, useful as well as rarely used.
@@ -12,21 +13,46 @@
     ```
 
 - ## Features by now:
+
   - ### Tree of content
+    - [rm-namechar](#rm-namechar)
     - [file-prefix](#file-prefix)
     - [ansible-roles](#ansible-roles)
     - [seq-tm](#seq-tm)
 
-  - ### Organize prefix of files in directory <span id="file-prefix"><span>
+  <span id="rm-namechar"></span>
+  - ### Remove useless characters of file/directory name
+    It will remove bytes in file/directory name like '`` ``', '``?``', '``%``'..., in the meantime keep '``.``' and '``-``'.
+
     ```shell
-      file-prefix [-m|--mark <mark>] [-d|--digit <digits>]
+    rm-namechar [OPTION]...
+    ```
+    | Argument          | Comment                                   |
+    | ---               | ---                                       |
+    | -d                | Only search directories.                  |
+    | -f                | Only search files.                        |
+    | -r                | Search directory and files. (Default)     |
+    | --max\|--maxdepth | Maximum depth of searching. (Default: 5)  |
+    | --min\|--mindepth | Minimum depth of searching. (Default: 1)  |
+    | -p\|--pattern     | Files pattern of searching.               |
+    | --pattern-dir |  Directories pattern of searching.            |
+    Quick copy:
+    ```shell
+    \curl -sSL https://raw.githubusercontent.com/mccg/rbc/r/rm-namechar | bash -s
+    ```
+
+  <span id="file-prefix"></span>
+  - ### Organize prefix of files in directory
+    ```shell
+    file-prefix [-m|--mark <mark>] [-d|--digit <digits>]
     ```
     Quick copy:
     ```shell
     \curl -sSL https://raw.githubusercontent.com/mccg/rbc/r/file-prefix | bash -s
     ```
 
-  - ### Test your ansible roles by one line command <span id="ansible-roles"><span>
+  <span id="ansible-roles"></span>
+  - ### Test your ansible roles by one line command
     ```shell
     ansible-roles <inventory_path> <group_name> <role1> [ role2, role3, ... ]
     ```
@@ -58,7 +84,8 @@
     \curl -sSL https://raw.githubusercontent.com/mccg/rbc/r/ansible-roles | bash -s
     ```
 
-  - ### Generate a datetime string array by `date` in shell <span id="seq-tm"><span>
+  <span id="seq-tm"><span>
+  - ### Generate a datetime string array by `date` in shell 
     Given a begin datetime, an end datetime, timedelta and output format,
     an array could be generated in shell environment.
 
