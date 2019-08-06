@@ -35,7 +35,8 @@
     | --max\|--maxdepth | Maximum depth of searching. (Default: 5)  |
     | --min\|--mindepth | Minimum depth of searching. (Default: 1)  |
     | -p\|--pattern     | Files pattern of searching.               |
-    | --pattern-dir |  Directories pattern of searching.            |
+    | --pattern-dir     |  Directories pattern of searching.        |
+
     Quick copy:
     ```shell
     \curl -sSL https://raw.githubusercontent.com/mccg/rbc/r/rm-namechar | bash -s -
