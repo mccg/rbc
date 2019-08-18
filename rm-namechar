@@ -39,7 +39,7 @@ do_mv () {
   local dst=`rm_namechar "$1"`
   echo [$2]: $1
   echo "         -> " $dst
-  test "$1" == "$dst"|| mv "$1" "$dst"
+  test "$1" == "$dst" || mv "$1" "$dst"
 }
 
 if test "$FILE_TYPE" == "r"; then

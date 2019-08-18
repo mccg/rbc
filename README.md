@@ -9,7 +9,7 @@
     ```shell
     \curl -sSL https://raw.githubusercontent.com/mccg/rbc/r/FX | bash
     # or add arguments after '-s'
-    \curl -sSL https://raw.githubusercontent.com/mccg/rbc/r/FX | bash -s some args
+    \curl -sSL https://raw.githubusercontent.com/mccg/rbc/r/FX | bash -s - some args
     ```
 
 - ## Features by now:
@@ -35,7 +35,7 @@
     | --max\|--maxdepth | Maximum depth of searching. (Default: 5)  |
     | --min\|--mindepth | Minimum depth of searching. (Default: 1)  |
     | -p\|--pattern     | Files pattern of searching.               |
-    | --pattern-dir     |  Directories pattern of searching.        |
+    | --pattern-dir     | Directories pattern of searching.         |
 
     Quick copy:
     ```shell
@@ -44,6 +44,7 @@
 
   <span id="file-prefix"></span>
   - ### Organize prefix of files in directory
+    Origanize disordered name of files in a directory, order files name by formatted number.
     ```shell
     file-prefix [-m|--mark <mark>] [-d|--digit <digits>]
     ```
