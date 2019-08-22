@@ -4,18 +4,19 @@ PATTERN=*
 PATTERN_DIR=*
 MIN_DEPTH=1
 MAX_DEPTH=5
-FILE_TYPE=r
+FIND_TYPE=r
 
-while [ -n "$1" ]; do
+while [ -n "$1" ];
+do
   case $1 in
     -p|--pattern)        PATTERN=${2};    shift 2;;
     --pattern-dir)       PATTERN_DIR=$2;  shift 2;;
     --min|--mindepth)    MIN_DEPTH=$2;    shift 2;;
     --max|--maxdepth)    MAX_DEPTH=$2;    shift 2;;
     -*)
-      [[ "$1" =~ f ]] && FILE_TYPE=f
-      [[ "$1" =~ d ]] && FILE_TYPE=d
-      [[ "$1" =~ r ]] && FILE_TYPE=r
+      [[ "$1" =~ f ]] && FIND_TYPE=f
+      [[ "$1" =~ d ]] && FIND_TYPE=d
+      [[ "$1" =~ r ]] && FIND_TYPE=r
       shift 1;;
     *) break;;
   esac
@@ -42,13 +43,13 @@ do_mv () {
   test "$1" == "$dst" || mv "$1" "$dst"
 }
 
-if test "$FILE_TYPE" == "r"; then
+if test "$FIND_TYPE" == "r"; then
   is_d=1
   is_f=1
-elif test "$FILE_TYPE" == "d"; then
+elif test "$FIND_TYPE" == "d"; then
   is_d=1
   is_f=
-elif test "$FILE_TYPE" == "f"; then
+elif test "$FIND_TYPE" == "f"; then
   is_d=
   is_f=1
 fi

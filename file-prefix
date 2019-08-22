@@ -3,7 +3,8 @@
 MS=`date +%s`
 DIGIT=5
 
-while [ -n $1 ]; do
+while [ -n $1 ];
+do
   case $1 in
     -m|--mark)   MS=$2;    shift 2;;
     -d|--digit)  DIGIT=$2; shift 2;;
